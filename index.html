@@ -25,12 +25,16 @@
       </div>
       <div class="sign-up-card container">
         <form>
-          <input placeholder="First Name" class="input-box">
-          <input placeholder="Last Name" class="input-box">
-          <input type="email" placeholder="Email Address" class="input-box">
-          <input type="password" placeholder="Password" class="input-box"> 
+          <input placeholder="First Name" class="input-box" required>
+          <p class="error-txt">First Name cannot be empty</p>
+          <input placeholder="Last Name" class="input-box" required>
+          <p class="error-txt">Last Name cannot be empty</p>
+          <input type="email" placeholder="Email Address" class="input-box" required>
+          <p class="error-txt">Looks like this is not an email</p>
+          <input type="password" placeholder="Password" class="input-box" required>
+          <p class="error-txt">Password cannot be empty</p> 
           <button>CLAIM YOUR FREE TRIAL</button>
-          <p>By clicking the button, you are agreeing to our Terms and Services.</p>
+          <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
         </form>
       </div>
     </div>
