@@ -1,84 +1,108 @@
 body {
     background: url(images/bg-intro-desktop.png) hsl(0, 100%, 74%);
+    margin: 0;
+    padding: 0;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100vh;
-    grid-row-gap: 1.25em;
-    align-items: center;
-    justify-items: center;
-    margin: auto;
-}
-
-.sign-up-card {
-    background: #fbfbfb;
-    border-radius: 8px;
-    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-    height: 360px;
-    margin: 6rem auto 8.1rem auto;
-    width: 400px;
-    padding: 20px;
+.button {
+    background: hsl(154, 59%, 51%);
+    border: none;
+    color: white;
+    padding: 6px 2px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
     text-align: center;
 }
 
-.input-box {
-    border-radius: 5px;
-    padding: 10px;
-    margin: 11px 0;
-    width: 90%;
-    border: 1px solid lightslategray;
-    outline: none;
-}
-
-input:invalid {
-    border: 3px solid red;
-}
-
 .terms {
-    margin-top: 0px;
+    text-align: center;
+}
+
+.button:hover {
+    background: #00995c;
+}
+
+input {
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: solid 2px lightgray;
+}
+
+.main-hero-txt h1 {
+    font-size: 1.7em;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.para-hero {
+    grid-column: 1/4;
+    grid-row: 2;
+    font-size: 1.1em;
 }
 
 .error-txt {
-    opacity: 0;
     display: none;
 }
 
-.trial-call-to-action {
-    margin-bottom: -90px;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px;
 }
 
 .trialbtn {
+    padding: 25px;
     border-radius: 5px;
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 15px;
-    background-color: navy;
-    color: white;
-    outline: none;
+    text-decoration: none;
     border: none;
-    cursor: pointer;
-    box-shadow: 0px 10px 5px -5px black;
-}
-
-button {
-    border-radius: 5px;
-    width: 98%;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 15px;
-    background-color: green;
-    color: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
-.hero-text {
-    grid-column: 2;
-    text-align: left;
+    background: hsl(248, 32%, 49%); 
     color: white;
 }
 
+.sign-up-card {
+    padding: 10px;
+    margin: 25px;
+    border: white solid 2px;
+    background: white;
+    border-radius: 10px;;
+}
+
+.input-box {
+    width: 80%;  
+}
+
+/* mobile styles */
+
+/* small tablet styles */
+@media screen and (min-width: 620px){
+
+}
+
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px){
+    body {
+        font-size: 23px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width:1200px){
+    body {
+        font-size: 25px;
+    }
+
+    .sign-up-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+}
